@@ -1,0 +1,24 @@
+app:
+  name: Finance
+  flow-enrichment:
+    data-category-field: data_category
+
+spring:
+  kafka:
+    consumer:
+      group-id: finance-consolidation
+      topic: ledger.balances
+      produced-by-application: Accounting
+      message:
+        data-category: LEDGER_BALANCE
+        payload-format: AVRO
+
+api:
+  pnl:
+    path: /api/v1/pnl
+    data-category: PNL_PACK
+    called-by-application: PNL
+
+callers:
+  - PNL
+  - Accounting
