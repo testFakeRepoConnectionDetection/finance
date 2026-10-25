@@ -1,5 +1,6 @@
 app:
   name: Finance
+  business_function: MANAGEMENT_REPORTING
   flow-enrichment:
     data-category-field: data_category
 

@@ -1,5 +1,7 @@
 # Finance (fixture)
 
+Business function: `MANAGEMENT_REPORTING` (`app.business_function`).
+
 Management finance. Consolidates the P&L pack and the general-ledger balances.
 
 ## Integrations (topology)
