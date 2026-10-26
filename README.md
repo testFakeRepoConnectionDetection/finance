@@ -3,18 +3,16 @@
 Business function: `MANAGEMENT_REPORTING` (`app.business_function`).
 Pillar: `Finance` (`app.pillar`).
 
-Management finance. Consolidates the P&L pack and the general-ledger balances.
+Management finance.
 
 ## Integrations (topology)
 
-- Exposes `/api/v1/pnl` called by **PNL**.
-- Consumes Kafka topic `ledger.balances` produced by **Accounting**.
+- Consumes Kafka topic `finance.cashflows` produced by **Accounting**.
 
 ## Data transiting on flows (Data Model fixture)
 
-| Peer | direction | Kind | Channel | data_category |
-|------|-----------|------|---------|---------------|
-| PNL | inbound | API | /pnl | `PNL_PACK` |
-| Accounting | inbound | KAFKA | ledger.balances | `LEDGER_BALANCE` |
+| Peer | direction | Kind | Channel | data | frequency |
+|------|-----------|------|---------|------|-----------|
+| Accounting | inbound | KAFKA | finance.cashflows | `cashflow` | `monthly` |
 
-See `TransitDataTypes.java` and `application.yml`.
+See `TransitDataTypes.java` and `application.yml` (`data`, `frequency`).

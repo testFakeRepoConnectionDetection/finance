@@ -3,24 +3,16 @@ app:
   business_function: MANAGEMENT_REPORTING
   pillar: Finance
   flow-enrichment:
-    data-category-field: data_category
+    data-field: data
+    frequency-field: frequency
 
 spring:
   kafka:
     consumer:
       group-id: finance-consolidation
-      topic: ledger.balances
+      topic: finance.cashflows
       produced-by-application: Accounting
+      connection-kind: KAFKA
       message:
-        data-category: LEDGER_BALANCE
-        payload-format: AVRO
-
-api:
-  pnl:
-    path: /api/v1/pnl
-    data-category: PNL_PACK
-    called-by-application: PNL
-
-callers:
-  - PNL
-  - Accounting
+        data: cashflow
+        frequency: monthly

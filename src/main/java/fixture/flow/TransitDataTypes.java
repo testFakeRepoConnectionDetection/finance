@@ -1,8 +1,8 @@
 package fixture.flow;
 
 /**
- * Data categories ingested by Finance.
- * grep: PNL_PACK LEDGER_BALANCE
+ * Edge attributes on Finance flows.
+ * grep: data frequency cashflow monthly
  */
 public final class TransitDataTypes {
 
@@ -12,11 +12,8 @@ public final class TransitDataTypes {
   /** Node attribute pillar for Finance. */
   public static final String PILLAR = "Finance";
 
-  public static final String API_PNL_PACK = "PNL_PACK";
-  public static final String KAFKA_LEDGER_BALANCE = "LEDGER_BALANCE";
-
-  public static final String API_PAYLOAD_FORMAT = "JSON";
-  public static final String KAFKA_PAYLOAD_FORMAT = "AVRO";
+  public static final String DATA_CASHFLOW = "cashflow";
+  public static final String FREQUENCY_MONTHLY = "monthly";
 
   private TransitDataTypes() {}
 }
