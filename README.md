@@ -1,6 +1,7 @@
 # Finance (fixture)
 
 Business function: `MANAGEMENT_REPORTING` (`app.business_function`).
+Pillar: `Finance` (`app.pillar`).
 
 Management finance. Consolidates the P&L pack and the general-ledger balances.
 
