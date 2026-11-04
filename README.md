@@ -1,5 +1,7 @@
 # Finance (fixture)
 
+Implemented in Python.
+
 Business function: `MANAGEMENT_REPORTING` (`app.business_function`).
 Pillar: `Finance` (`app.pillar`).
 
@@ -15,4 +17,4 @@ Management finance.
 |------|-----------|------|---------|------|-----------|
 | Accounting | inbound | KAFKA | finance.cashflows | `cashflow` | `monthly` |
 
-See `TransitDataTypes.java` and `application.yml` (`data`, `frequency`).
+See `src/finance/flows.py` and `application.yml` (`data`, `frequency`).
